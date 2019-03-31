@@ -15,7 +15,15 @@
               };
               // Invokes API method: isInConsole
               function isInConsole() {
-                       sforce.interaction.isInConsole(isInConsoleCallback);
+						try
+						{
+							sforce.interaction.isInConsole(isInConsoleCallback);
+						}
+						catch(e)
+						{
+							console.log('isInConsole',e);
+							alert(e)
+						}
               }
               // Callback of API method: getCallCenterSettings
               var getCallCenterSettingsCallback = function (response) {
