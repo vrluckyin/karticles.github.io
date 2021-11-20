@@ -1,2 +1,0 @@
-# karticles.github.io
-karticles
